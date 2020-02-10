@@ -3,4 +3,4 @@
 Repo für Informatik-Projekte der Oberstufe am Pelizaeus Gymnasium.
 
 **Index:**
-- Noch keine Projekte
+- [Verflixte 7](Verflixte%207)
