@@ -14,9 +14,9 @@ public class Pot {
 		chips = pChips;
 	}
 	public int getSticks(){
-		return chips;
+		return sticks;
 	}
 	public void setSticks(int pSticks){
-		chips = pSticks;
+		sticks = pSticks;
 	}
 }

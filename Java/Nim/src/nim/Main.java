@@ -1,5 +1,6 @@
 package nim;
 import java.util.Scanner;
+
 /**
  * @author leon
  *
@@ -13,18 +14,19 @@ public class Main {
 	private Pot Pot;
 	public static Scanner Scan;
 	private Main Main;
-	Player[] Players;
-	
+	private Player p1;
+	private Player p2;	
 	public Main(){
 		Scan = new Scanner(System.in);
 		Pot = new Pot();
 		Main = this;
-		Player[] Players = new Player[10];
-		for(int i = 0; i<Players.length; i++) {
-			Players[i] = new Player(i, Pot, Main);
-			System.out.println(Players[i]);
-		}
-		doGame(0);
+		p1 = new Player(1, Pot, Main);
+		p2 = new Player(2, Pot, Main);
+		if(doGame() == p1)
+			System.out.println("Player 1 won the game!");
+		else
+			System.out.println("Player 2 won the game!");
+		
 	}
 	
 	public static int howMuch(String pString) {
@@ -39,45 +41,52 @@ public class Main {
 		}
 	}
 	
-	public void first() {
+	public Player first(Player player) {
+		
+			System.out.println("Both players pay 1 chip");
+				Pot.setChips(Pot.getChips() + 2);
+				p1.setChips(p1.getChips() -1);
+				p2.setChips(p2.getChips() -1);
+			System.out.println(Pot.getChips() + " Chips are in the box.");
+			System.out.println("Player 1 has "+ p1.getChips());
+			System.out.println("Player 2 has "+ p2.getChips());
 
-		if(Players[0] != null)
-			System.out.println("yes");
-		else
-			System.out.println("no");
-		//System.out.println(Players.length);
-		//System.out.println(Players[0]);
-
-		for(int i = 0; i<Players.length;i++) {
-			System.out.println("You are the first player, please place 10 to 40 matches into the Box!");
-			if(Players[i] != null){
-				Players[i].getValidation();
-				Pot.setChips(Pot.getChips() + 1);
-				Players[i].setChips(Players[i].getChips() -1);
-			}
-		}
-		Players[0].doTurn();
+		return player.doTurn();
 	}
 	
-	public Player doGame(int ID) {
-		first();
-		int count = 0;
-		while(count >= 1) {
-			count = 0;
-			for(int i = 0; i<Players.length && Players[i].getValidation();i++){
-					count++;
-					Players[i].doTurn();
-				}
-		}
-		for(int i = 0; i<Players.length;i++) {
-			if(Players[i].getValidation())
-				return Players[i];
-		}
-		return null;
+	public Player doGame() {
+		Player loser;
+		while(true){
+			if(p2.getChips() == 0 || p1.getChips() == 0)
+				break;
+			loser = first(p1);
+			if(loser == p1){
+				p2.setChips(Pot.getChips() + p2.getChips());
+			}
+			else{
+				p1.setChips(Pot.getChips() + p1.getChips());
+			}
+			Pot.setChips(0);
+		
+			if(p2.getChips() == 0 || p1.getChips() == 0)
+				break;
+			loser = first(p2);
+			if(loser == p1)
+				p2.setChips(Pot.getChips() + p2.getChips());
+			else
+				p1.setChips(Pot.getChips() + p1.getChips());
+			Pot.setChips(0);
 	}
-	/*
-	public void removePlayer(int ID) {5
-		Players[ID] = null;
+		if(p1.getChips() == 0)
+			return p2;
+		else
+			return p1;
 	}
-	*/
+
+	public Player getP1(){
+		return p1;
+	}
+	public Player getP2(){
+		return p2;
+	}
 }
