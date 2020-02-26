@@ -7,3 +7,5 @@ Repo für Informatik-Projekte der Oberstufe am Pelizaeus Gymnasium.
   - [Verflixte 7](BlueJ/Verflixte%207)
 - Greenfoot
   - [Roboter.java](Greenfoot/Roboter_Szenario/Roboter.java)
+- Java
+  - [Nim](Java/Nim)
