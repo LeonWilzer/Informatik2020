@@ -1,4 +1,6 @@
-package nim;
+package main.java.xyz.wilzer.Nim;
+
+import java.util.InputMismatchException;
 
 public class Player {
 	int chips;
@@ -12,9 +14,10 @@ public class Player {
 		Main = main;
 	}
 	public Player doTurn(){
+		try{
 		if (Pot.getSticks()==0)
-		{
-			System.out.println("Player " + ID + ", you are the first player, please place 10 to 40 matches into the Box!");
+		{	
+				System.out.println("Player " + ID + ", you are the first player, please place 10 to 40 matches into the Box!");
 			int input = nim.Main.Scan.nextInt();
 			if (input <= 40 && input >= 10)
 				Pot.setSticks(input);
@@ -37,6 +40,7 @@ public class Player {
 			return Main.getP1().doTurn();
 	}
 	public void take(){
+		try{
 		System.out.println("Matches in the Box: " + Pot.getSticks());
 		System.out.println("Please remove 1 to 3 matches, Player" + ID + ".");
 		int input = nim.Main.Scan.nextInt();
@@ -44,6 +48,11 @@ public class Player {
 			Pot.setSticks(Pot.getSticks() - input);
 		else
 			take();
+		}
+		catch (Exception e){
+			System.out.println("Input must be an integer!");
+			take();
+		}
 	}
 	public int getChips(){
 		return chips;

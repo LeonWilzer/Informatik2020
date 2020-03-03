@@ -1,4 +1,5 @@
-package nim;
+package main.java.xyz.wilzer.Nim;
+
 import java.util.Scanner;
 
 /**

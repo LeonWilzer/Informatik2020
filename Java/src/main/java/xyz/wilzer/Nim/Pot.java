@@ -1,4 +1,4 @@
-package nim;
+package main.java.xyz.wilzer.Nim;
 
 public class Pot {
 	private int sticks;
