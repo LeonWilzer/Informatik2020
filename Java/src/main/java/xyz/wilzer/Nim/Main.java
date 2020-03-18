@@ -1,4 +1,4 @@
-package main.java.xyz.wilzer.Nim;
+package Java.src.main.java.xyz.wilzer.Nim;
 
 import java.util.Scanner;
 
@@ -16,20 +16,21 @@ public class Main {
 	public static Scanner Scan;
 	private Main Main;
 	private Player p1;
-	private Player p2;	
-	public Main(){
+	private Player p2;
+
+	public Main() {
 		Scan = new Scanner(System.in);
 		Pot = new Pot();
 		Main = this;
 		p1 = new Player(1, Pot, Main);
 		p2 = new Player(2, Pot, Main);
-		if(doGame() == p1)
+		if (doGame() == p1)
 			System.out.println("Player 1 won the game!");
 		else
 			System.out.println("Player 2 won the game!");
-		
+
 	}
-	
+
 	public static int howMuch(String pString) {
 		System.out.println(pString);
 		int ans;

@@ -1,6 +1,6 @@
 package Java.src.main.java.xyz.wilzer.Misc.diceAutomata;
 
-import Java.src.main.java.xyz.wilzer.Common.Games.Dice.Dice;
+import Java.src.main.java.xyz.wilzer.Common.Dice;
 
 public class Main {
 
@@ -9,7 +9,7 @@ public class Main {
     int pasch;
     int seven;
     public static void main(String args[]) {
-        Main main = new Main();
+        new Main();
     }
 
     public Main(){

@@ -1,6 +1,6 @@
 package Java.src.main.java.xyz.wilzer.Spielautomat;
 
-import Java.src.main.java.xyz.wilzer.Common.Games.Dice.*;
+import Java.src.main.java.xyz.wilzer.Common.Dice;
 
 public class Rad {
     private int zahl;

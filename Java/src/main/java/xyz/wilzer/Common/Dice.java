@@ -1,4 +1,4 @@
-package Java.src.main.java.xyz.wilzer.Common.Games.Dice;
+package Java.src.main.java.xyz.wilzer.Common;
 
 import java.util.Random;
 

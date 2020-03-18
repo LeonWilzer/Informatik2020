@@ -1,4 +1,4 @@
-package main.java.xyz.wilzer.Nim;
+package Java.src.main.java.xyz.wilzer.Nim;
 
 public class Pot {
 	private int sticks;

@@ -1,3 +1,4 @@
+package Java.src.main.java.xyz.wilzer.Misc.Bank;
 
 public class Konto{
     private int kontonummer;
