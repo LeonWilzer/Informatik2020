@@ -2,7 +2,7 @@ package Java.src.main.java.xyz.wilzer.Spielautomat;
 
 public class Kasse{
 
-    int Kapital;
+    private int Kapital;
     public Kasse(){
         Kapital = 0;
     }

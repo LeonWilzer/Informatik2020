@@ -1,10 +1,10 @@
 package Java.src.main.java.xyz.wilzer.Spielautomat;
 
-import Java.src.main.java.xyz.wilzer.Common.Games.Dice.Dice;
+import Java.src.main.java.xyz.wilzer.Common.Games.Dice.*;
 
 public class Rad {
-    int zahl;
-    int anzahlZahlen;
+    private int zahl;
+    private int anzahlZahlen;
 
     public Rad(){
       anzahlZahlen = 10;

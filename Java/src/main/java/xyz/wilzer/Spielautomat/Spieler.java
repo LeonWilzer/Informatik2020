@@ -1,7 +1,7 @@
 package Java.src.main.java.xyz.wilzer.Spielautomat;
 
 public class Spieler{
-    int vermoegen;
+    private int vermoegen;
     public Spieler(){
         vermoegen = 0;
     }

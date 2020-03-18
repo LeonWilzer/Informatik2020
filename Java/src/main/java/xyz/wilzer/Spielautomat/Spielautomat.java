@@ -1,15 +1,15 @@
 package Java.src.main.java.xyz.wilzer.Spielautomat;
 
 public class Spielautomat{
-    
+
     public static void main(String args[]) {
         new Spielautomat();
     }
-
-    Rad[] Wheel = new Rad[3];
-    int points;
-    Kasse Bank;
-    Spieler Player;
+    
+    private Rad[] Wheel = new Rad[3];
+    private int points;
+    private Kasse Bank;
+    private Spieler Player;
 
     public Spielautomat(){
         Bank = new Kasse();
@@ -44,10 +44,10 @@ public class Spielautomat{
             Bank.auszahlen(30);
             Player.einstecken(30);
 
-            System.out.println("You just frigging won mate!");
+            System.out.println("You just friggin' won mate!");
         }
         else{
-            System.out.println("You just frigging lost mate!");
+            System.out.println("You just friggin' lost mate!");
         }
     }
 }
