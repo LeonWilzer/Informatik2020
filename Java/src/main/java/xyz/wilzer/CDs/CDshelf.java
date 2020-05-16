@@ -13,7 +13,7 @@ public class CDshelf {
         int num = 0;
         while(cds[num] != null && num<cds.length)
             num++;
-        if (num>cds.length)
+        if (num>=cds.length)
             return;
         cds[num] = new CD(pTitle, pArtist, pYear);
     }
