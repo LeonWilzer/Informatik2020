@@ -3,7 +3,7 @@ import java.util.Random;
  * Beschreiben Sie hier die Klasse FeldErzeugen.
  * 
  * @author Lukas Langrock
- * @version 2020-05-26
+ * @version 1.0
  */
 public class FeldErzeugen
 {
@@ -12,9 +12,6 @@ public class FeldErzeugen
     int[] zahlen;
 
     // Beziehungen
-    Bubblesort bubblesortAlgorythm;
-    Insertionsort insertionsortAlgorythm;
-    Selectionsort selectionsortAlgorythm;
 
     /**
      * Konstruktor für Objekte der Klasse FeldErzeugen
@@ -22,32 +19,7 @@ public class FeldErzeugen
     public FeldErzeugen(int anzahlElemente)
     {
         laenge = anzahlElemente;
-        zahlen = unSortiertesFeld();
     }
-
-    public void sort(String algorythm)
-    {
-        switch (algorythm) {
-            case "Bubblesort":
-            bubblesortAlgorythm = new Bubblesort();
-            zahlen = bubblesortAlgorythm.Entrypoint(zahlen);
-            bubblesortAlgorythm = null;
-            break;
-
-            case "Insertionsort":
-            insertionsortAlgorythm = new Insertionsort();
-            zahlen = insertionsortAlgorythm.Entrypoint(zahlen);
-            insertionsortAlgorythm = null;
-            break;
-
-            case "Selectionsort":
-            selectionsortAlgorythm = new Selectionsort();
-            zahlen = selectionsortAlgorythm.Entrypoint(zahlen);
-            selectionsortAlgorythm = null;
-            break;
-        }
-    }
-
     /**
      * Hier wird ein sortiertes Feld erzeugt. Es gibt keine gleichen Zahlen
      * @return sortiertes Zahlenfeld
@@ -64,8 +36,7 @@ public class FeldErzeugen
         }
         return zahlen;
     }
-
-    /**
+     /**
      * Hier wird ein unsortiertes Feld erzeugt. Es kann gleiche Zahlen geben
      * @return unsortiertes Zahlenfeld
      */
@@ -79,5 +50,16 @@ public class FeldErzeugen
         }
         return zahlen;
     }
+    
+    public dgfucvzh
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 }
